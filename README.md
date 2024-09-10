@@ -1,6 +1,6 @@
 ## 3rd Gen Random Encounters
 
-3rd Gen Random Encounters is a combination of Lua and Python scripting that automates the process of random encounter shiny hunting via either pacing or the Acro Bike. This is accomplished by inputting repetitive movements, then template matching for specific images, and finally checking if the SID is less than 8. *Note: Even though Emerald's RNG is broken, this process still works (As opposed to Soft Resetting).*
+3rd Gen Random Encounters is a combination of Lua and Python scripting that automates the process of random encounter shiny hunting via either pacing or the Acro Bike. This is accomplished by inputting repetitive movements, then template matching for specific images, and finally checking if the SID is less than 8. *Note: Even though Emerald's RNG is broken, this process still works on standard odds since it is executing long term on the same instance.*
 
 <div style="display: grid">
 <img src="./readme_images/readmeTest.png" style="grid-column: 1">
@@ -71,4 +71,11 @@ playsound("./assets/shinysound.mp3",block=False)
 ---
 ## 4. Execution
 
-After the installation/customization is complete, it is finally time for execution. Launch your game on the mGBA emulator and navigate to your hunting location. If you are running in Horizontal/Vertical mode, position your character in such a way that you will bonk between two walls (preferably with three or more tiles on either side). If you are running in Acro mode, make sure you have your Acro Bike out and are standing on a tile where encounters can spawn. First, load the script by navigating to Tools > Scripting. Select File > Load Script in the pop up window and select *main.lua*. Next, either run the script *main.py* from a terminal or your IDE. Enter your desired mode, and then re-navigate over to your mGBA window. You will have about 5 seconds before your first action, which should give you plenty of time. Leave mGBA in focus and you are good to go! Side note: the mGBA scripting window indicates that you can press Shift + Left or Shift + Right to view different Pokemon. Do not do this or else your next encounter will be invalidated. Happy hunting :3
+After the installation/customization is complete, it is finally time for execution.
+
+1.  Launch your game on the mGBA emulator and navigate to your hunting location. If you are running in Horizontal/Vertical mode, position your character in such a way that you will bonk between two walls (preferably with three or more tiles on either side). If you are running in Acro mode, make sure you have your Acro Bike out and are standing on a tile where encounters can spawn.
+2.  First, load the script by navigating to Tools > Scripting. Select File > Load Script in the pop up window and select *main.lua*.
+3.  Next, either run the script *main.py* from a terminal or your IDE.
+4.  Enter your desired mode, and then re-navigate over to your mGBA window. Leave the window in focus and you are good to go!
+
+You will have about 5 seconds before your first action, which should give you plenty of time. Side note: the mGBA scripting window indicates that you can press Shift + Left or Shift + Right to view different Pokemon. Do not do this or else your next encounter will be invalidated. Happy hunting :3

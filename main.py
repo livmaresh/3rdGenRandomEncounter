@@ -46,6 +46,7 @@ mode = input("Please enter your RE mode: ").lower()
 
 prepLua()
 stream = True
+sid = 99999
 counter = 0
 firstPass = True
 game = gameCheck()
@@ -97,13 +98,13 @@ while(stream):
     if(matchTemplate(cv2.imread("test.png"),leftTemplate) or matchTemplate(cv2.imread("test.png"),rightTemplate)):
         counter = counter + 1
         sockCheck = True
-        print("Found a match. Checking for SID.")
+        print("Found a match. Checking for shiny roll.")
         clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         clientsocket.connect(('localhost', 8888))
         clientsocket.send(b"Hello \n")
         while sockCheck:
             outMessage = clientsocket.recv(1024)
-            print("The shiny ID is " + str(outMessage.decode('utf-8')).replace("\n","") + ". This was attempt " + str(counter) + ".")
+            print("The shiny roll is " + str(outMessage.decode('utf-8')).replace("\n","") + ". This was attempt " + str(counter) + ".")
             sid = int(outMessage.decode('utf-8'))
             sockCheck = False
         clientsocket.close()
